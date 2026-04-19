@@ -8,5 +8,4 @@ Modul: Webtechnologien, HTW Berlin
 
 📋 Projektbeschreibung
 -----------------------------------------------------------------------------------------------------------
-Bookify is a backend application that allows users to manage their personal reading list.
-Users can add books, track their reading status, rate books, and organize them by genre.
+Bookify ist eine Backend-Anwendung, die es Nutzern ermöglicht, ihre persönliche Leseliste zu verwalten. Nutzer können Bücher hinzufügen, ihren Lesestatus verfolgen, Bücher bewerten und sie nach Genre organisieren.
