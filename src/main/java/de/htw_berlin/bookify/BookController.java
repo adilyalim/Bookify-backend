@@ -3,13 +3,14 @@ package de.htw_berlin.bookify;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE})
 public class BookController {
 
     @Autowired
@@ -23,5 +24,9 @@ public class BookController {
     @PostMapping("/books")
     public Book createBook(@RequestBody Book book) {
         return service.save(book);
+    }
+    @DeleteMapping("/books/{id}")
+    public void deleteBook(@PathVariable Long id) {
+        service.delete(id);
     }
 }

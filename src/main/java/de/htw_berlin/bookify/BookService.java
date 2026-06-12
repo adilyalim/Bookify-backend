@@ -17,4 +17,7 @@ public class BookService {
     public Book save(Book book) {
         return repo.save(book);
     }
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
 }
