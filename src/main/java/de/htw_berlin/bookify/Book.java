@@ -1,15 +1,26 @@
 package de.htw_berlin.bookify;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
     private String author;
     private int pages;
 
+    public Book() {}
 
     // Konstruktor
-    public Book(Long id, String title, String author, int pages) {
-        this.id = id;
+    public Book(String title, String author, int pages) {
+
         this.title = title;
         this.author = author;
         this.pages = pages;
