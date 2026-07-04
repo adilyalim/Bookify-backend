@@ -20,4 +20,11 @@ public class BookService {
     public void delete(Long id) {
         repo.deleteById(id);
     }
+    public Book update(Long id, Book updatedBook) {
+        Book book = repo.findById(id).orElseThrow(() -> new RuntimeException("Book not found"));
+        book.setTitle(updatedBook.getTitle());
+        book.setAuthor(updatedBook.getAuthor());
+        book.setPages(updatedBook.getPages());
+        return repo.save(book);
+    }
 }
