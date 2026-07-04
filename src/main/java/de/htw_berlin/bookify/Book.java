@@ -15,15 +15,19 @@ public class Book {
     private String title;
     private String author;
     private int pages;
+    private int bewertung;
+    private String kommentar;
 
     public Book() {}
 
     // Konstruktor
-    public Book(String title, String author, int pages) {
+    public Book(String title, String author, int pages, int bewertung, String kommentar) {
 
         this.title = title;
         this.author = author;
         this.pages = pages;
+        this.bewertung = bewertung;
+        this.kommentar = kommentar;
     }
 
     public Long getId() {
@@ -56,5 +60,21 @@ public class Book {
 
     public void setPages(int pages) {
         this.pages = pages;
+    }
+
+    public int getBewertung() {
+        return bewertung;
+    }
+
+    public void setBewertung(int bewertung) {
+        this.bewertung = bewertung;
+    }
+
+    public String getKommentar() {
+        return kommentar;
+    }
+
+    public void setKommentar(String kommentar) {
+        this.kommentar = kommentar;
     }
 }
