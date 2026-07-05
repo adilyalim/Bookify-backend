@@ -15,7 +15,7 @@ public class Book {
     private String title;
     private String author;
     private int pages;
-    private int bewertung;
+    private Integer bewertung;
     private String kommentar;
     private String thumbnail;
     private String shelf;
@@ -23,7 +23,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String author, int pages, int bewertung, String kommentar, String thumbnail, String shelf) {
+    public Book(String title, String author, int pages, Integer bewertung, String kommentar, String thumbnail, String shelf) {
         this.title = title;
         this.author = author;
         this.pages = pages;
@@ -49,7 +49,7 @@ public class Book {
         return pages;
     }
 
-    public int getBewertung() {
+    public Integer getBewertung() {
         return bewertung;
     }
 
@@ -81,7 +81,7 @@ public class Book {
         this.pages = pages;
     }
 
-    public void setBewertung(int bewertung) {
+    public void setBewertung(Integer bewertung) {
         this.bewertung = bewertung;
     }
 
